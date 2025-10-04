@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carousel Component</title>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: #343a40;
+    }
+
+    .carousel {
+      width: 1000px;
+      margin: 100px auto;
+
+      background-color: #087f5b;
+
+      /* padding: 32px; */
+      padding: 32px 64px 32px 96px;
+      border-radius: 12px;
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      gap: 100px;
+    }
+
+    .carousel-img {
+      width: 250px;
+      border-radius: 12px;
+      transform: scale(1.5);
+      box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .carousel-text {
+      color: #e6fcf5;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .carousel-author {
+      color: #96f2d7;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .carousel-job {
+      color: #e6fcf5;
+      font-size: 14px;
+    }
+
+    .btn {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      color: #087f5b;
+      position: absolute;
+      box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn:hover {
+      background-color: #e6fcf5;
+    }
+
+    .btn-icon {
+      stroke: #087f5b;
+      width: 24px;
+      height: 24px;
+    }
+
+    .btn--left {
+      /* In relation to Parent ELement */
+      left: 0;
+      top: 50%;
+
+      /* In relation to Element itself */
+      transform: translate(-50%, -50%);
+    }
+
+    .btn--right {
+      right: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    .dots {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(0, 32px);
+
+      display: flex;
+      gap: 12px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid #087f5b;
+    }
+
+    .dot--fill {
+      background-color: #087f5b;
+    }
+  </style>
+
+  <body>
+    <div class="carousel">
+      <img
+        class="carousel-img"
+        src="Images/customers.jpg"
+        alt="customers-siptting"
+      />
+      <blockquote>
+        <p class="carousel-text">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem non
+          minus iusto quam sapiente eligendi quidem sit. Accusamus voluptatibus
+          voluptate debitis doloribus velit. Non doloribus quam dignissimos
+          perspiciatis quod."
+        </p>
+        <p class="carousel-author">Maria de Almeida</p>
+        <p class="carousel-job">Senior Product Manager at EDP Comercial</p>
+      </blockquote>
+      <button class="btn btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot dot--fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>
