@@ -21,49 +21,90 @@
       body {
         font-family: "Inter", sans-serif;
         color: #343a40;
+        margin: 100px auto;
+        width: 800px;
+      }
+
+      h2 {
+        margin-bottom: 48px;
+        font-size: 36px;
+        letter-spacing: -0.5px;
       }
 
       table {
-        margin: 100px auto;
-        width: 800px;
-        /* border: 10px solid #343a40; */
+        /* For Aligning the whole table into Center */
+        margin: 0px auto;
+        text-align: left;
+        font-size: 14px;
+        /* border: 1px solid #343a40; */
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 16px 24px;
+        /* border: 1px solid #343a40; */
+      }
+
+      table th {
+        font-size: 16px;
+        width: 25%;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: #f8f9fa;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #e9ecef;
+      }
+
+      .info-main-header {
+        background-color: #087f5b;
+        color: #fff;
       }
     </style>
   </head>
   <body>
-    <div class="info--table">
+    <section class="info--table">
+      <h2>Chair Info</h2>
       <table>
-        <tr>
-          <th>Chair</th>
-          <th>The Laid Back</th>
-          <th>The Worker Bee</th>
-          <th>The Chair 4/2</th>
-        </tr>
-        <tr>
-          <th>Width</th>
-          <td>80 cm</td>
-          <td>60 cm</td>
-          <td>220 cm</td>
-        </tr>
-        <tr>
-          <th>Height</th>
-          <td>100 cm</td>
-          <td>110 cm</td>
-          <td>90 cm</td>
-        </tr>
-        <tr>
-          <th>Depth</th>
-          <td>70 cm</td>
-          <td>65 cm</td>
-          <td>80 cm</td>
-        </tr>
-        <tr>
-          <th>Weight</th>
-          <td>16 kg</td>
-          <td>20 kg</td>
-          <td>80 kg</td>
-        </tr>
+        <thead>
+          <tr class="info-main-header">
+            <th>Chair</th>
+            <th>The Laid Back</th>
+            <th>The Worker Bee</th>
+            <th>The Chair 4/2</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th>Width</th>
+            <td>80 cm</td>
+            <td>60 cm</td>
+            <td>220 cm</td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td>100 cm</td>
+            <td>110 cm</td>
+            <td>90 cm</td>
+          </tr>
+          <tr>
+            <th>Depth</th>
+            <td>70 cm</td>
+            <td>65 cm</td>
+            <td>80 cm</td>
+          </tr>
+          <tr>
+            <th>Weight</th>
+            <td>16 kg</td>
+            <td>20 kg</td>
+            <td>80 kg</td>
+          </tr>
+        </tbody>
       </table>
-    </div>
+    </section>
   </body>
 </html>
