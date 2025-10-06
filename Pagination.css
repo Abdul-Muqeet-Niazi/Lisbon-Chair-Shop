@@ -1,0 +1,87 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+COLORS FOR THE WEB
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40 (Basically used for fonts to relieve eyes while reading).
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  width: 800px;
+  margin: 200px auto;
+}
+
+section {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+a {
+  color: #343a40;
+  text-decoration: none;
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover {
+  background-color: #087f5b;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #087f5b;
+  background-color: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon {
+  stroke: #087f5b;
+  width: 18px;
+}
+
+.btn:hover {
+  background-color: #087f5b;
+  border: none;
+}
+
+/* Important One!, this property means if you hover btn then it will change the stroke color into white
+it works like if condition like in C programming */
+.btn:hover .btn-icon {
+  stroke: #fff;
+}
+
+/* This is an "and" selector with a higher selector specificity ( greater than "> 1") but remember
+it does not have any space between them, otherwise it will become descendent selector.
+It works only if an element have two classes. Example: <a href="#" class="page--num page--current">3</a>*/
+
+/* .page--num.page--current */
+
+/* We used only, if we want to style some element but it doesn't do because it has low specificity! then
+we use this! */
