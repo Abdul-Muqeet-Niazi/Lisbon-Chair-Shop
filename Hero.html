@@ -11,6 +11,9 @@
     />
     <title>Hero Component</title>
     <style>
+      /* Remember: Always give background color to elements for better understanding of styling the 
+      components and layouts, as I give it but also comment it, so you can understand it.  */
+
       * {
         margin: 0;
         padding: 0;
@@ -19,16 +22,32 @@
 
       body {
         font-family: "Rubik", sans-serif;
-        color: #343a40;
+        color: #fff;
       }
+
+      /* When you will come here after a long time, then I had written some background property but 
+      remember this property will not be applied on "nav" because "container" class has a higher
+      specificity, so it does apply on simple nav element because of lower specificity. In order
+      to solve this we have declared the name of class for the div element of header from container
+      to mini-container*/
 
       .container {
         margin: 0 auto;
         width: 1000px;
+        /* background-color: burlywood; */
       }
 
       header {
+        /* background-color: aquamarine; */
         height: 100vh;
+        position: relative;
+
+        background-image: linear-gradient(
+            rgba(33, 37, 41, 0.9),
+            rgba(52, 58, 64, 0.5)
+          ),
+          url(Images/hero\ 2.0.jpg);
+        background-size: cover;
       }
 
       section {
@@ -38,10 +57,27 @@
       nav {
         font-size: 18px;
         font-weight: 700;
-        margin-bottom: 36px;
+        padding-top: 20px;
+        /* background-color: antiquewhite; */
 
         display: flex;
         justify-content: space-between;
+      }
+
+      .mini-container {
+        width: 1000px;
+        margin: 0 auto;
+        /* background-color: burlywood; */
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .micro-container {
+        /* background-color: cadetblue; */
+        width: 50%;
       }
 
       h1 {
@@ -82,13 +118,15 @@
         <div>NAVIGATION</div>
       </nav>
 
-      <div class="container">
-        <h1>A healthy meal delivered to your door, every single day</h1>
-        <p>
-          The smart 365-days-per-year food subscription that will makeyou eat
-          healthy again. Tailored to your personal tastes and nutrition food.
-        </p>
-        <a href="#" class="btn">Start Eating Well</a>
+      <div class="mini-container">
+        <div class="micro-container">
+          <h1>A healthy meal delivered to your door, every single day</h1>
+          <p>
+            The smart 365-days-per-year food subscription that will makeyou eat
+            healthy again. Tailored to your personal tastes and nutrition food.
+          </p>
+          <a href="#" class="btn">Start Eating Well</a>
+        </div>
       </div>
     </header>
 
