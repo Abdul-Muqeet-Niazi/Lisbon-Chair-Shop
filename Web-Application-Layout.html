@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Web Application Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        /* width: 1200px; */
+        margin: 0 auto;
+        height: 100vh;
+
+        font-size: 18px;
+        font-family: "Rubik", sans-serif;
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: 150px 300px 1fr 300px;
+        grid-template-rows: 80px 1fr;
+      }
+
+      nav {
+        background-color: antiquewhite;
+        grid-row: 1 / -1;
+      }
+      menu {
+        background-color: aquamarine;
+        grid-column: 2 / -1;
+      }
+      section {
+        background-color: azure;
+      }
+      main {
+        background-color: blanchedalmond;
+      }
+      aside {
+        background-color: thistle;
+      }
+
+      .btn {
+        font-size: 14px;
+        font-family: "Rubik", sans-serif;
+        border: none;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>Nav</nav>
+    <menu>
+      <button class="btn">New</button>
+      <button class="btn">Reply</button>
+      <button class="btn">Forward</button>
+      <button class="btn">Mark Unread</button>
+      <button class="btn btn--trash">Trash</button>
+    </menu>
+    <section>Inbox</section>
+    <main>Email View</main>
+    <aside>Additional Info</aside>
+  </body>
+</html>
